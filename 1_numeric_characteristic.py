@@ -9,19 +9,16 @@ def numeric_characteristic(num):
 	num = str(num)
 	try:
 		num = int(num)
-		result = True
 	except ValueError:
 		return f'{num}- не является числом/целым числом'
-
-	if result is True:
-		if is_prime(num):
-			result = 'Число простое '
-		else:
-			result = 'Число составное '
-		if num % 2 == 0:
-			result += 'и чётное.'
-		else:
-			result += 'и не чётное.'
+	if is_prime(num):
+		result = 'Число простое '
+	else:
+		result = 'Число составное '
+	if num % 2 == 0:
+		result += 'и чётное.'
+	else:
+		result += 'и не чётное.'
 	return result
 
 
